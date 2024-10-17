@@ -293,7 +293,30 @@ body {
   background-color: #FFFFFF;
   border-radius: 8px;
   padding: 20px;
-  height: 100%;
+  .toogle-icon svg {
+    transition: transform 0.4s ease; /* Smooth transition for rotation */
+  }
+  
+  .toogle-icon.rotate svg {
+    transform: rotate(180deg); /* Rotate 180 degrees when active */
+  }
+  
+  .table-wrapper {
+    display: none; /* Initially hidden */
+    opacity: 0; /* Start with 0 opacity */
+    max-height: 0; /* Initially collapsed */
+    overflow-y: hidden; /* Hide content when collapsed */
+    transition: opacity 0.4s ease, max-height 0.4s ease;
+  }
+  
+  .table-wrapper.show {
+    opacity: 1; /* Full opacity */
+    max-height: 1000px; /* A high value to allow expansion */
+  }
+  .table-title {
+    cursor: pointer;
+    font-weight: bold;
+  }
   @include breakpoint(max-sm) {
     padding: 16px;
   }
@@ -310,6 +333,7 @@ body {
     border-radius: 8px;
     overflow: hidden;
     margin: 0;
+    margin-top: 12px;
   }
   thead {
     th {
@@ -710,4 +734,5 @@ body {
     }
   }
 }
+
 /* dashboard body content end */

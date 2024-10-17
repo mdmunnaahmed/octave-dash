@@ -167,7 +167,14 @@
         <div class="row gy-4">
           <div class="col-lg-6 mb-2 mb-lg-0">
             <div class="money-table-wrapper">
-              <div class="table-title">Money Cash Entries</div>
+              <div class="table-title mb-0 d-flex align-items-center justify-content-between">
+                Money Cash Entries
+                <span class="toogle-icon text-end">
+                  <svg width="16" height="10" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.00001 5.8C5.59168 5.8 5.18334 5.6425 4.87418 5.33333L1.07084 1.53C0.901678 1.36083 0.901678 1.08083 1.07084 0.911665C1.24001 0.742498 1.52001 0.742498 1.68918 0.911665L5.49251 4.715C5.77251 4.995 6.22751 4.995 6.50751 4.715L10.3108 0.911665C10.48 0.742498 10.76 0.742498 10.9292 0.911665C11.0983 1.08083 11.0983 1.36083 10.9292 1.53L7.12585 5.33333C6.81668 5.6425 6.40835 5.8 6.00001 5.8Z" fill="#64748B"/>
+                    </svg>                    
+                </span>
+              </div>
               <div class="table-wrapper">
                 <table class="table">
                   <thead>
@@ -233,7 +240,14 @@
           </div>
           <div class="col-lg-6">
             <div class="money-table-wrapper">
-              <div class="table-title">Money Out Flows</div>
+              <div class="table-title mb-0 d-flex align-items-center justify-content-between">
+                Money Out Flows
+                <span class="toogle-icon text-end">
+                  <svg width="16" height="10" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.00001 5.8C5.59168 5.8 5.18334 5.6425 4.87418 5.33333L1.07084 1.53C0.901678 1.36083 0.901678 1.08083 1.07084 0.911665C1.24001 0.742498 1.52001 0.742498 1.68918 0.911665L5.49251 4.715C5.77251 4.995 6.22751 4.995 6.50751 4.715L10.3108 0.911665C10.48 0.742498 10.76 0.742498 10.9292 0.911665C11.0983 1.08083 11.0983 1.36083 10.9292 1.53L7.12585 5.33333C6.81668 5.6425 6.40835 5.8 6.00001 5.8Z" fill="#64748B"/>
+                    </svg>                    
+                </span>
+              </div>
               <div class="table-wrapper">
                 <table class="table">
                   <thead>
@@ -312,7 +326,15 @@
           <div class="row gy-3">
             <div class="col-lg-6">
               <div class="float-table-wrapper">
-                <div class="table-title mb-2">Float Activities</div>
+                <div class="table-title mb-0 d-flex align-items-center justify-content-between pe-3 pe-sm-0">
+                  Float Activities
+                  <span class="toogle-icon text-end">
+                    <svg width="16" height="10" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.00001 5.8C5.59168 5.8 5.18334 5.6425 4.87418 5.33333L1.07084 1.53C0.901678 1.36083 0.901678 1.08083 1.07084 0.911665C1.24001 0.742498 1.52001 0.742498 1.68918 0.911665L5.49251 4.715C5.77251 4.995 6.22751 4.995 6.50751 4.715L10.3108 0.911665C10.48 0.742498 10.76 0.742498 10.9292 0.911665C11.0983 1.08083 11.0983 1.36083 10.9292 1.53L7.12585 5.33333C6.81668 5.6425 6.40835 5.8 6.00001 5.8Z" fill="#64748B"/>
+                      </svg>                    
+                  </span>
+                </div>
+                
                 <div class="table-wrapper">
                   <table class="table">
                     <thead>
@@ -378,7 +400,14 @@
             </div>
             <div class="col-lg-6">
               <div class="float-table-wrapper">
-                <div class="table-title mb-2">Float Received</div>
+                <div class="table-title mb-0 d-flex align-items-center justify-content-between pe-3 pe-sm-0">
+                  Float Received
+                  <span class="toogle-icon text-end">
+                    <svg width="16" height="10" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.00001 5.8C5.59168 5.8 5.18334 5.6425 4.87418 5.33333L1.07084 1.53C0.901678 1.36083 0.901678 1.08083 1.07084 0.911665C1.24001 0.742498 1.52001 0.742498 1.68918 0.911665L5.49251 4.715C5.77251 4.995 6.22751 4.995 6.50751 4.715L10.3108 0.911665C10.48 0.742498 10.76 0.742498 10.9292 0.911665C11.0983 1.08083 11.0983 1.36083 10.9292 1.53L7.12585 5.33333C6.81668 5.6425 6.40835 5.8 6.00001 5.8Z" fill="#64748B"/>
+                      </svg>                    
+                  </span>
+                </div>
                 <div class="table-wrapper">
                   <table class="table">
                     <thead>
@@ -449,5 +478,55 @@
     </div>
     <!-- dashboard body content end -->
 
+
+    <script>
+      // Select all table titles
+      const tableTitles = document.querySelectorAll('.table-title');
+
+      // Loop through each table title and add event listener
+      tableTitles.forEach(function(tableTitle) {
+        tableTitle.addEventListener('click', function() {
+          // Get the associated table-wrapper for the clicked title
+          const tableWrapper = this.nextElementSibling;
+
+          // Get the toggle icon inside the clicked table title
+          const toggleIcon = this.querySelector('.toogle-icon');
+
+          // Check if the table is already visible
+          if (tableWrapper.classList.contains('show')) {
+            // Slide up and fade out
+            tableWrapper.style.maxHeight = `${tableWrapper.scrollHeight}px`; // Set to current height
+            requestAnimationFrame(() => {
+              tableWrapper.style.maxHeight = '0'; // Then collapse
+              tableWrapper.style.opacity = '0'; // Fade out
+            });
+            tableWrapper.addEventListener('transitionend', function() {
+              if (!tableWrapper.classList.contains('show')) {
+                tableWrapper.style.display = 'none'; // Hide after animation completes
+              }
+            }, { once: true });
+
+            // Rotate the icon back to original position
+            toggleIcon.classList.remove('rotate');
+          } else {
+            // Slide down and fade in
+            tableWrapper.style.display = 'block'; // Ensure it's block before measuring
+            tableWrapper.style.opacity = '0'; // Start fade in from 0 opacity
+            tableWrapper.style.maxHeight = '0'; // Start collapsed
+            requestAnimationFrame(() => {
+              tableWrapper.style.maxHeight = `${tableWrapper.scrollHeight}px`; // Expand to content's height
+              tableWrapper.style.opacity = '1'; // Fade in to full opacity
+            });
+
+            // Rotate the icon 180 degrees
+            toggleIcon.classList.add('rotate');
+          }
+
+          // Toggle the 'show' class to handle future clicks
+          tableWrapper.classList.toggle('show');
+        });
+      });
+
+    </script>
   </body>
 </html>

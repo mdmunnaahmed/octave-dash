@@ -245,7 +245,27 @@ body {
   background-color: #FFFFFF;
   border-radius: 8px;
   padding: 20px;
-  height: 100%;
+}
+.money-table-wrapper .toogle-icon svg {
+  transition: transform 0.4s ease; /* Smooth transition for rotation */
+}
+.money-table-wrapper .toogle-icon.rotate svg {
+  transform: rotate(180deg); /* Rotate 180 degrees when active */
+}
+.money-table-wrapper .table-wrapper {
+  display: none; /* Initially hidden */
+  opacity: 0; /* Start with 0 opacity */
+  max-height: 0; /* Initially collapsed */
+  overflow-y: hidden; /* Hide content when collapsed */
+  transition: opacity 0.4s ease, max-height 0.4s ease;
+}
+.money-table-wrapper .table-wrapper.show {
+  opacity: 1; /* Full opacity */
+  max-height: 1000px; /* A high value to allow expansion */
+}
+.money-table-wrapper .table-title {
+  cursor: pointer;
+  font-weight: bold;
 }
 @media (max-width: 575px) {
   .money-table-wrapper {
@@ -264,6 +284,7 @@ body {
   border-radius: 8px;
   overflow: hidden;
   margin: 0;
+  margin-top: 12px;
 }
 .money-table-wrapper thead th {
   background-color: #02578E;
